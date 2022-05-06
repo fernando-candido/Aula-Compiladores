@@ -1,0 +1,10 @@
+leia
+escreva
+se
+para
+ate
+novalinha
+int 
+float
+bool
+char

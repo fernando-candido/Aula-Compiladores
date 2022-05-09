@@ -9,47 +9,44 @@ import java.util.List;
 
 public class Arquivos {
 
-	public List<String> alfabeto;
+	public String[] alfabeto;
 	public List<String> dicionario;
 	public List<String> expressoes;
-	public List<String> progama;
+	public List<String> programa;
 	
-	alfabeto = lerArquivo(C:\\Linguagem\\cport\\alfabeto.txt);
-	dicionario = lerArquivo();
-	expressoes = lerArquivo();
-	progama = lerArquivo();
-	
+
+	public Arquivos() throws IOException {
+	List<String> alfabetoLinhas;
+	alfabetoLinhas = lerArquivo("C:\\Linguagem\\cport\\alfabeto.txt");
+	dicionario= lerArquivo("C:\\Linguagem\\cport\\dicionario.txt");
+	expressoes = lerArquivo("C:\\Linguagem\\cport\\expressoes.txt");
+	programa = lerArquivo("C:\\Linguagem\\cport\\exemplo.txt");
+		
 	String temp="";
 			
 	
-	for(String linhas: alfabetoLinha) {
+	for(String linha: alfabetoLinhas) {
 		temp += linha;
 		
 	}
 	alfabeto = temp.split("");
-	
 	// se quiser olhar
-	
+	}	
 
-	
-	public Arquivos() {
-		
-		alfabeto = new ArrayList<>();
-		dicionario = new ArrayList<>();
-		expressoes = new ArrayList<>();
-		progama = new ArrayList<>();
-	}
-	
 	public List<String> lerArquivo(String arquivo) throws IOException {
-		
+		List<String> conteudo = new ArrayList<>();
 		FileReader leitor = new FileReader(arquivo);
 		BufferedReader buffer = new BufferedReader(leitor);		
 		String linha = "";
-		while(linha = buffer.readLine()) != null ) {
-				
-	
-			}
-			
+		while((linha = buffer.readLine()) != null ) {
+			conteudo.add(linha);
+		}
 		return conteudo;
+	}
+
+	public void imprimirArquivo(List<String> arquivo){
+		for(String linha: arquivo){
+			System.out.println(linha);
+		}
 	}
 }

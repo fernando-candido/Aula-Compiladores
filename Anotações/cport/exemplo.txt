@@ -1,6 +1,6 @@
 Taboada {
 int n
-int i
+
 int r
 escreva "Digite um numero:"
 leia n

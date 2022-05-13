@@ -13,7 +13,7 @@ public class AnalisadorSintatico {
 				erros++;
 			} 
 		}
-		System.out.println("Fim da Analise Sint√°tica: erros = " + erros);
+		System.out.println("Fim da Analise Sint·tica: erros = " + erros);
 	}
 	
 	public Boolean linhaAprovada(String linha, List<String> expressoes) {

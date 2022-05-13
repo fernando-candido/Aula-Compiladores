@@ -18,7 +18,7 @@ public class Arquivos {
 	public Arquivos() throws IOException {
 	List<String> alfabetoLinhas;
 	alfabetoLinhas = lerArquivo("C:\\Linguagem\\cport\\alfabeto.txt");
-	dicionario= lerArquivo("C:\\Linguagem\\cport\\dicionario.txt");
+	dicionario = lerArquivo("C:\\Linguagem\\cport\\dicionario.txt");
 	expressoes = lerArquivo("C:\\Linguagem\\cport\\expressoes.txt");
 	programa = lerArquivo("C:\\Linguagem\\cport\\exemplo.txt");
 		

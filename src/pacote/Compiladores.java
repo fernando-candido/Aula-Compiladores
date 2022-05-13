@@ -10,9 +10,9 @@ public class Compiladores {
 		Arquivos arquivos = new Arquivos();
 		AnalisadorLexico al = new AnalisadorLexico();
 		AnalisadorSintatico as = new AnalisadorSintatico();
+		AnalisadorSemantico ase = new AnalisadorSemantico();
 		
 		System.out.println("\n");
-		// System.out.println("_______________________________________________________________________________");
 		System.out.println("*******************************************************************************");
 		System.out.println("*                                                                             *");
 		System.out.println("*                          Iniciando o Compilador...                          *");
@@ -22,6 +22,7 @@ public class Compiladores {
 
 		al.analisar(arquivos.alfabeto, arquivos.programa);
 		as.analisar(arquivos.programa, arquivos.expressoes);
+		ase.analisar(arquivos.programa, arquivos.dicionario);
 		
 	}
 
